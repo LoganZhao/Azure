@@ -1,0 +1,17 @@
+Login-AzureRmAccount
+Select-AzureRmSubscription -SubscriptionName JonSnow
+$fileUri = "https://weiweistorageaccount.blob.core.windows.net/weiweistoragecontainer/zabbix_agent.tar.gz"
+$SettingsString = @{
+        fileUris = @($fileUri)
+}
+$SettingsString = $SettingsString | ConvertTo-Json
+$SettingsString
+$ProtectedSettingString = @{
+        storageAccountName = "weiweistorageaccount"
+        storageAccountKey =  "CcKWU4at1R4WEF1kCmSa5oxdqe+SlooA2A8Cvu62wx8JLl9z79bpN8NI0ChSKxV2L0ZAEt7+0A+MA/qPVhDQMg=="
+        commandToExecute = "mkdir -p /opt; tar xf zabbix_agent.tar.gz -C /opt/; bash /opt/zabbix_agent/action.sh start"
+    }
+$ProtectedSettingString = $ProtectedSettingString | ConvertTo-Json
+$ProtectedSettingString
+
+Set-AzureRmVMExtension -ResourceGroupName 'ACS' -VMName 'serial-test' -Location 'westeurope' -Name 'CustomScriptForLinux' -Publisher 'Microsoft.Azure.Extensions' -ExtensionType 'CustomScript' -TypeHandlerVersion '2.0' -SettingString $SettingsString -ProtectedSettingString $ProtectedSettingString -Debug
