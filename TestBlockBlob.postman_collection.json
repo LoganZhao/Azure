@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "1594e65e-59ef-49c0-abdd-b96cc85bb078",
+		"name": "TestBlockBlob",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Put Block",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "777"
+				},
+				"url": {
+					"raw": "https://jlst.blob.core.windows.net/testblock/test.txt?comp=block&blockid=YmxvY2swNA==&st=2018-07-05T02%3A10%3A42Z&se=2018-07-31T02%3A10%3A00Z&sp=rwdl&sv=2017-07-29&sr=c&sig=9z4lNo%2FiEerRimm85DmLeQWS6UGSPXkvFmmhtmjQVyc%3D",
+					"protocol": "https",
+					"host": [
+						"jlst",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"test.txt"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "block"
+						},
+						{
+							"key": "blockid",
+							"value": "YmxvY2swNA=="
+						},
+						{
+							"key": "st",
+							"value": "2018-07-05T02%3A10%3A42Z"
+						},
+						{
+							"key": "se",
+							"value": "2018-07-31T02%3A10%3A00Z"
+						},
+						{
+							"key": "sp",
+							"value": "rwdl"
+						},
+						{
+							"key": "sv",
+							"value": "2017-07-29"
+						},
+						{
+							"key": "sr",
+							"value": "c"
+						},
+						{
+							"key": "sig",
+							"value": "9z4lNo%2FiEerRimm85DmLeQWS6UGSPXkvFmmhtmjQVyc%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Block List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://jlst.blob.core.windows.net/testblock/test.txt?comp=blocklist&blocklisttype=all&st=2018-07-05T02%3A10%3A42Z&se=2018-07-31T02%3A10%3A00Z&sp=rwdl&sv=2017-07-29&sr=c&sig=9z4lNo%2FiEerRimm85DmLeQWS6UGSPXkvFmmhtmjQVyc%3D",
+					"protocol": "https",
+					"host": [
+						"jlst",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"test.txt"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "blocklist"
+						},
+						{
+							"key": "blocklisttype",
+							"value": "all"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-05T02%3A10%3A42Z"
+						},
+						{
+							"key": "se",
+							"value": "2018-07-31T02%3A10%3A00Z"
+						},
+						{
+							"key": "sp",
+							"value": "rwdl"
+						},
+						{
+							"key": "sv",
+							"value": "2017-07-29"
+						},
+						{
+							"key": "sr",
+							"value": "c"
+						},
+						{
+							"key": "sig",
+							"value": "9z4lNo%2FiEerRimm85DmLeQWS6UGSPXkvFmmhtmjQVyc%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Block List",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>  \r\n<BlockList>  \r\n  <Committed>dGVzdGE=</Committed>  \r\n  <Committed>dGVzdGI=</Committed>  \r\n</BlockList>  "
+				},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/test.txt?comp=blocklist&blocklisttype=all&sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-07T11:35:47Z&st=2018-07-26T03:35:47Z&spr=https&sig=%2FV1oucOpyEWiahbBJx5hG%2FnP3Vp6FR6LWWAjwscm5HA%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"test.txt"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "blocklist"
+						},
+						{
+							"key": "blocklisttype",
+							"value": "all"
+						},
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-07T11:35:47Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-26T03:35:47Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "%2FV1oucOpyEWiahbBJx5hG%2FnP3Vp6FR6LWWAjwscm5HA%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blob",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/test.txt?sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-07T11:35:47Z&st=2018-07-26T03:35:47Z&spr=https&sig=%2FV1oucOpyEWiahbBJx5hG%2FnP3Vp6FR6LWWAjwscm5HA%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"test.txt"
+					],
+					"query": [
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-07T11:35:47Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-26T03:35:47Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "%2FV1oucOpyEWiahbBJx5hG%2FnP3Vp6FR6LWWAjwscm5HA%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

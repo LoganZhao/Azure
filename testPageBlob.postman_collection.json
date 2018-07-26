@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "7b4b40ce-f02d-449e-9556-bbee1702177b",
+		"name": "testPageBlob",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PutBlob",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-ms-blob-type",
+						"value": "PageBlob"
+					},
+					{
+						"key": "x-ms-blob-content-length",
+						"value": "1024"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/testpage4?sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-11T10:16:12Z&st=2018-07-23T02:16:12Z&spr=https&sig=3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"testpage4"
+					],
+					"query": [
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-11T10:16:12Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-23T02:16:12Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutPage",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-ms-page-write",
+						"value": "update"
+					},
+					{
+						"key": "x-ms-range",
+						"value": "bytes=0-511"
+					},
+					{
+						"key": "Content-Length",
+						"value": "512"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/testpage4?comp=page&sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-11T10:16:12Z&st=2018-07-23T02:16:12Z&spr=https&sig=3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"testpage4"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "page"
+						},
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-11T10:16:12Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-23T02:16:12Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPageList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/testpage4?comp=pagelist&sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-11T10:16:12Z&st=2018-07-23T02:16:12Z&spr=https&sig=3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"testpage4"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "pagelist"
+						},
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-11T10:16:12Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-23T02:16:12Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBlob",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-ms-range",
+						"value": "bytes=0-511"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://teststoragev2.blob.core.windows.net/testblock/testpage4?sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-11T10:16:12Z&st=2018-07-23T02:16:12Z&spr=https&sig=3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D",
+					"protocol": "https",
+					"host": [
+						"teststoragev2",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"testblock",
+						"testpage4"
+					],
+					"query": [
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-11T10:16:12Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-23T02:16:12Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "3GpJmm2YNO%2FzbP%2BJryGn7b3cqS7LhOzBK3vFEbiXDlw%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPagefromVHD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sqlserverdisks.blob.core.windows.net/vhds/CentOS7-20170119-152355.vhd?comp=pagelist&sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-08-07T14:46:31Z&st=2018-07-26T06:46:31Z&spr=https&sig=5otrx5fttjJ99IMU0mwjPOlOIm%2BOzH3NsAuhw5nzrxc%3D",
+					"protocol": "https",
+					"host": [
+						"sqlserverdisks",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"vhds",
+						"CentOS7-20170119-152355.vhd"
+					],
+					"query": [
+						{
+							"key": "comp",
+							"value": "pagelist"
+						},
+						{
+							"key": "sv",
+							"value": "2017-11-09"
+						},
+						{
+							"key": "ss",
+							"value": "bfqt"
+						},
+						{
+							"key": "srt",
+							"value": "sco"
+						},
+						{
+							"key": "sp",
+							"value": "rwdlacup"
+						},
+						{
+							"key": "se",
+							"value": "2018-08-07T14:46:31Z"
+						},
+						{
+							"key": "st",
+							"value": "2018-07-26T06:46:31Z"
+						},
+						{
+							"key": "spr",
+							"value": "https"
+						},
+						{
+							"key": "sig",
+							"value": "5otrx5fttjJ99IMU0mwjPOlOIm%2BOzH3NsAuhw5nzrxc%3D"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
