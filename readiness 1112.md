@@ -1,4 +1,5 @@
 # 第二次checkpoint
-[[_TOC_]]
+
+[[TOC]]
 
 ## 知识学习
