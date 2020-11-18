@@ -104,7 +104,9 @@ Body discarded
 
 **周二开始弹性上线工单，目前经手10个工单，已关闭3个工单 2个好评
 ## 工单处理
-5P1G0T8W Ddos高防（国际）+加速路线，发现从国内到hk服务器IP latency很高。
+### 5P1G0T8W 
+
+- Ddos高防（国际）+加速路线，发现从国内到hk服务器IP latency很高。
 
 - 首先看到解析发现域名解析已经切换到高防IP了,且銩包严重
 
@@ -137,8 +139,38 @@ Body discarded
 
 ```
 - 通过云盾免登发现客户的实例发现他的加速ip已经黑洞了 T.T
-- 黑洞过后，域名解析到高速IP恢复正常。
-- 建议客户做些调整来
+- 黑洞过后，域名解析到高速IP恢复正常
+- 建议客户做些调整来避免他的加速IP被频繁黑洞
+
+1）由于beaver是在侧机房的设备，所以流量已经到达了机房被判定了ddos攻击，在域名或者IP段设置黑名单已经没有用了
+![avatar](https://github.com/LoganZhao/Azure/blob/master/beaver.png.jpg)
+2）经排查，可以建议客户升级成安全加速线路
+![avatar](https://github.com/LoganZhao/Azure/blob/master/testresult.png)
+
+### F41GF6P8 
+日志服务，学习如何配置告警，而不通过云监控来配置。
+
+![avatar](https://github.com/LoganZhao/Azure/blob/master/{FE1144EC-8FAB-4B24-9BA0-C08D83662ED6}.png.jpg)
+
+## 合作伙伴事宜
+- 招聘
+目前已经面试8人，这边pass interview 2人，一人预计月底入职 加入ECS组，另一人在谈offer阶段
+
+- 垂直线划分
+拟定计划，已和几位垂直线负责人私下对齐过，各垂直线也基本确定。准备这两天继续推动
+
+- 周三向技术组deliver 话术以及处理工单流程上的培训，并且将新版话术应用工单处理中
+
+
+## 下周计划
+
+- 继续弹性工单上线争取了解更多产品及其处理流程
+- 需要想一下弹性计算垂直线的新人readiness plan以及目前人员的能力提升计划
+
+
+
+
+
 
 
 
